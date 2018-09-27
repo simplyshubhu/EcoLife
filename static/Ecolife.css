@@ -1,0 +1,102 @@
+        body {
+
+            position: relative;
+            background-color: #f2f2f2;
+
+        }
+
+        .bg-img {
+            background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+            height: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+        #navbar-spy {
+
+            background-color: #563D7C;
+        }
+
+        a {
+
+            color: darkgrey;
+        }
+
+        #home1 {
+
+            margin-top: 30px;
+            padding-top: 30px;
+            height: 570px;
+            border-style: ridge;
+            border-radius: 20px;
+            border-color: blueviolet;
+            border-width: 3px;
+        }
+
+        .component {
+
+            margin-top: 30px;
+            padding-top: 15px;
+            height: 570px;
+            border-style: ridge;
+            border-radius: 20px;
+            border-color: blueviolet;
+            border-width: 3px;
+            background-color: #d9d9d9;
+
+        }
+
+        #water {
+
+            position: relative;
+            bottom: 0;
+        }
+
+        #secure {
+
+            margin: 30px 0 20px 0;
+        }
+
+        .homediv {
+
+            color: wheat;
+            text-align: center;
+            padding-top: 8em;
+        }
+
+        h5 {
+
+            padding-top: 20px;
+        }
+
+        .my-img {
+
+            padding-top: 25px;
+            border-radius: 40px;
+        }
+
+        #brightness {
+
+            background-color: red;
+        }
+
+
+        .home-img {
+            background-image: url("../static/homeBack.png");
+            height: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #electric {
+
+            margin-top: 142px;
+        }
+
+        #water {
+
+            margin-top: 25px;
+        }

@@ -1,0 +1,47 @@
+        #bod,
+        html {
+            height: auto;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bg-img {
+            background-image: url("bg.jpg");
+            height: 40em;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+        .card {
+
+            opacity: 0.9;
+            margin: 6em auto;
+            border-radius: 10px;
+
+        }
+
+        .bar {
+
+            opacity: 0.7;
+
+        }
+
+        .button {
+
+            width: 80px;
+            text-align: center;
+        }
+
+        .navtext {
+
+            font-size: 150%;
+            color: green;
+            font-weight: 700;
+
+        }
+        #invalid{
+            color: red;
+        }

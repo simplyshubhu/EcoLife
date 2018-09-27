@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+
+    <!-- Bolt Script-->
+
+    <script src='../static/timer.js'></script>
+    <script type="text/javascript" src="https://cloud.boltiot.com/static/js/boltCommands.js"></script>
+
+    <script>
+      setKey('d1c0747d-cf58-4b22-b97a-cfae6ba9ae2e', 'BOLT7487042')
+
+    </script>
+
+
+
+
+    <link rel="icon" type="../static/image/png" href="EcoLife-Icon.ico">
+
+    <link href="../static/main.css" rel="stylesheet">
+    <script src="../static/highlight.js"></script>
+
+
+    <!--CSS Portion -->
+
+    <style>
+      body {
+
+        position: relative;
+        background-color: #f2f2f2;
+
+      }
+
+      .bg-img {
+        background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+        height: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+
+      #navbar-spy {
+
+        background-color: #563D7C;
+      }
+
+      a {
+
+        color: darkgrey;
+      }
+
+      #home1 {
+
+        margin-top: 30px;
+        padding-top: 30px;
+        height: 570px;
+        border-style: ridge;
+        border-radius: 20px;
+        border-color: blueviolet;
+        border-width: 3px;
+      }
+
+      .component {
+
+        margin-top: 30px;
+        padding-top: 15px;
+        height: 570px;
+        border-style: ridge;
+        border-radius: 20px;
+        border-color: blueviolet;
+        border-width: 3px;
+        background-color: #d9d9d9;
+
+      }
+
+      #water {
+
+        position: relative;
+        bottom: 0;
+      }
+
+      #secure {
+
+        margin: 30px 0 20px 0;
+      }
+
+      .homediv {
+
+        color: wheat;
+        text-align: center;
+        padding-top: 8em;
+      }
+
+      h5 {
+
+        padding-top: 20px;
+      }
+
+      .my-img {
+
+        padding-top: 25px;
+        border-radius: 40px;
+      }
+
+      #brightness {
+
+        background-color: red;
+      }
+
+
+      .home-img {
+        background-image: url("../static/homeBack.png");
+        height: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #electric {
+
+        margin-top: 142px;
+      }
+
+      #water {
+
+        margin-top: 25px;
+      }
+
+    </style>
+
+    <title>EcoLife Home</title>
+
+
+  </head>
+
+
+
+  <body class="bg-img" data-spy="scroll" data-target="#navbar-spy" data-offset="10" id="home">
+    <nav id="navbar-spy" class="navbar fixed-top">
+      <a class="navbar-brand" href="#"><img src="../static/EcoLife-Svg.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo"><b> EcoLife</b></a>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#electric">Electicity</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#water">Water</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#secure">Security</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--Home Portion -->
+
+    <div class="container">
+
+      <div class="row align-items-start container-fluid">
+        <div class="col home-img" id="home1">
+          <div class="container homediv">
+            <h1 class="display-4">We are providing our best...</h1>
+            <p class="lead">Our team secures your home and manage resources like electricity and water.</p>
+            <hr class="my-2">
+            <p>It uses IOT technology to control and monitor home resources which benefit in long term.</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </p>
+            <div id="electric"></div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Electricity Portion -->
+
+
+      <div class="row align-items-center container-fluid">
+        <div class="col component">
+          <h2>Electricity</h2>
+          <div class="row">
+            <div class="col">
+              <img class="card-img-top img-responsive my-img" src="../static/light.jpeg" alt="Card image cap">
+              <h5 class="lead">We can easily turn on and off the light and also change the brightness of the light using buttons given here.</h5>
+              <div id="water"></div>
+
+            </div>
+            <div class="col">
+              <h5>Turn Light On and Off</h5>
+              <a class="btn btn-primary btn-lg" onclick="digitalWrite(4,'HIGH')">ON</a>
+              <a class="btn btn-primary btn-lg" onclick="digitalWrite(4,'LOW')">OFF</a>
+              <h5>Control the brightnes</h5>
+              <a class="btn btn-primary btn-lg" onclick="analogWrite(0,'50')">Low</a>
+              <a class="btn btn-primary btn-lg" onclick="analogWrite(0,'125')">Medium</a>
+              <a class="btn btn-primary btn-lg" onclick="analogWrite(0,'250')">High</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <!--Water Portion -->
+
+
+      <div class="row align-items-center container-fluid">
+        <div class="col component prodiv">
+          <div class="row">
+            <h2>Water</h2>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img class="card-img-top img-responsive my-img" src="../static/water.jpg" alt="Card image cap">
+              <h5 class="lead">We can easily check the level of water and it also alerts if water level is in critical condition.</h5>
+            </div>
+            <div class="col">
+              <h5>Show water level</h5>
+              <a class="btn btn-primary btn-lg">Display</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Security Portion -->
+
+
+      <div class="row align-items-end container-fluid">
+        <div class="col component" id="secure">
+          <div class="row">
+            <div class="col-2">
+              <h2>Security</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img class="card-img-top img-responsive my-img" src="../static/security.jpg" alt="Card image cap">
+              <h5 class="lead">We can easily turn on and off the security and also it automatically turns on the alarm and light if intruder alert.We can manually turn them off.</h5>
+            </div>
+            <div class="col">
+              <h5>Turn Alarm On and Off</h5>
+              <a class="btn btn-primary btn-lg" id="secure_on">ON</a>
+              <a class="btn btn-primary btn-lg">OFF</a>
+              <h5>Turn Light On and Off</h5>
+              <a class="btn btn-primary btn-lg" onclick="digitalWrite(4,'HIGH'); startCount();">ON</a>
+              <a class="btn btn-primary btn-lg" onclick="digitalWrite(4,'HIGH'); stopCounter(); sendData();">OFF</a>
+              <br/>
+              <br/>
+              <span id="counter"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--End-->
+
+
+    <!--Security script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  </body>
+
+</html>
